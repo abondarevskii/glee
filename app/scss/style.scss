@@ -3,4 +3,101 @@
 @import "reset";
 @import "global";
 
+.header {
+   padding: 50px 0;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.logo {
+   display: flex;
+}
+
+.menu {
+   &__list {
+      display: flex;
+      font-size: 15px;
+      line-height: 12px;
+      @extend %rubik-500;
+   }
+   &__list-item + .menu__list-item {
+      padding-left: 35px;
+   }
+   &__list-link {
+      color: #436372;
+   }
+}
+
+.user-nav {
+   display: flex;
+
+   &__link {
+      position: relative;
+   }
+
+   & img {
+      position: absolute;
+      bottom: 32%;
+      left: 32%;
+   }
+
+   &__link:nth-child(1) {
+      background-color: #edf1f4;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 20px;
+   }
+   &__link:nth-child(1):hover {
+      background-color: #c2c5c7;
+      transition: all 2.8s;
+   }
+
+   &__link:nth-child(2) {
+      background-color: #fcd7b6;
+      width: 90px;
+      height: 50px;
+      border-radius: 50px 0px 0px 50px;
+   }
+
+   &__link:nth-child(3) {
+      background-color: #fcd7b6;
+      width: 90px;
+      height: 50px;
+      border-radius: 0 50px 50px 0;
+      margin-right: 20px;
+   }
+   &__link:nth-child:hover(3) {
+      background-color: black;
+   }
+
+   &__link:nth-child(4) {
+      background-color: #a3bbc8;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+   }
+   &__link:nth-child(4):hover {
+      background-color: #606669;
+      transition: all 2.8s;
+   }
+
+   &__num {
+      color: #243f4d;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      top: 10px;
+      right: 35px;
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+   }
+}
+
 @import "media";
