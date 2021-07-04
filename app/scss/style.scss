@@ -135,6 +135,7 @@
    }
    &__logo {
       margin-bottom: 25px;
+      display: flex;
    }
    &__adress,
    &__phone,
@@ -222,29 +223,44 @@
 }
 .top-slider {
    &__inner {
-      padding-top: 100px;
       background-color: #fcd7b6;
    }
    &__item {
-      display: flex !important;
-      justify-content: space-between;
+      padding: 220px 0 240px;
    }
-
-   &__content {
-      padding: 220px 0 0 300px;
+   &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 15px;
+      position: relative;
+      ::before {
+         content: "";
+         position: absolute;
+         right: -70px;
+         top: 50%;
+         width: 634px;
+         height: 634px;
+         border-radius: 50%;
+         background-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+         transform: translateY(-50%);
+         z-index: -1;
+      }
    }
 
    &__title {
-      max-width: 530px;
+      max-width: 430px;
       font-size: 72px;
       line-height: 70px;
       color: #243f4d;
       @extend %rubik-500;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
    }
    &__text {
-      max-width: 370px;
-      margin-bottom: 40px;
+      max-width: 360px;
+      margin-bottom: 35px;
       @extend %rubik-400;
       font-size: 18px;
       line-height: 30px;
@@ -254,12 +270,38 @@
       @extend %rubik-500;
       color: #fff;
       background-color: $accent;
-      padding: 25px 30px 25px 30px;
+      padding: 21px 20px 21px 27px;
+      margin-bottom: 30px;
    }
    span {
       margin-right: 60px;
    }
-   &__img {
+   .slick-dots {
+      display: flex;
+      justify-content: center;
+
+      li {
+         padding: 0 5px;
+         line-height: 0;
+         margin-bottom: 40px;
+         button {
+            padding: 0;
+            font-size: 11px;
+            line-height: 0;
+            @extend %rubik-500;
+            color: #243f4d;
+            background-color: #fde3cc;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+         }
+         &.slick-active {
+            button {
+               background-color: #fff;
+            }
+         }
+      }
    }
 }
 
