@@ -271,7 +271,6 @@
       color: #fff;
       background-color: $accent;
       padding: 21px 20px 21px 27px;
-      margin-bottom: 30px;
    }
    span {
       margin-right: 60px;
@@ -286,7 +285,7 @@
          margin-bottom: 40px;
          button {
             padding: 0;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 0;
             @extend %rubik-500;
             color: #243f4d;
@@ -302,6 +301,50 @@
             }
          }
       }
+   }
+}
+
+.advantages {
+   margin-bottom: 70px;
+   background-color: #fef7f0;
+   &__items {
+      display: flex;
+   }
+   &__item {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 48px;
+      @extend %dmsans-400;
+      position: relative;
+   }
+   &__item:not(:last-child) {
+      border-right: 1px solid rgba(36, 63, 77, 0.1);
+   }
+   &__info {
+      padding-left: 80px;
+      max-width: 306px;
+      background-position: 0 7px;
+      background-repeat: no-repeat;
+   }
+   &__info--support {
+      background-image: url("../images/icons/icon-support.svg");
+   }
+   &__info--delivery {
+      background-image: url("../images/icons/icon-delivery.svg");
+   }
+   &__info--cart {
+      background-image: url("../images/icons/icon-payment.svg");
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #414141;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 30px;
+      color: #585858;
    }
 }
 
