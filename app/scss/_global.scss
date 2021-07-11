@@ -24,14 +24,17 @@ body {
    max-width: 1800px;
 }
 
-.footer-container {
-   max-width: 1170px;
-   margin: 0 auto;
-}
-
 a {
    font-size: 14px;
    line-height: 32px;
    color: #7b7b7b;
    @extend %rubik-400;
+}
+
+.title {
+   @extend %dmsans-700;
+   font-size: 36px;
+   color: #191919;
+   text-align: center;
+   margin-bottom: 30px;
 }
