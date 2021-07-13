@@ -349,25 +349,6 @@
 }
 
 .products {
-   ul.gallery-nav {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 80px;
-   }
-   li.gallery-nav__item {
-      margin-right: 30px;
-   }
-   button.gallery-nav__button {
-      padding: 0;
-      border: none;
-      @extend %dmsans-700;
-      color: #8b8b8b;
-      background-color: transparent;
-      cursor: pointer;
-   }
-   button.mixitup-control-active {
-      color: #191919;
-   }
    &__items {
       display: flex;
       flex-wrap: wrap;
@@ -453,6 +434,7 @@
 }
 
 .offers {
+   margin-bottom: 100px;
    &__items {
       display: flex;
    }
@@ -484,11 +466,10 @@
    }
    &__text {
       @extend %rubik-400;
-      line-height: 30px;
       margin-bottom: 34px;
    }
    &__link {
-      padding: 20px 20px 20px 19px;
+      padding: 20px;
       border: 1px solid #d8d3cc;
       border-radius: 5px;
       color: #243f4d;
@@ -496,6 +477,69 @@
    &__link span {
       padding-right: 45px;
    }
+}
+
+.design {
+   margin-bottom: 120px;
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+   }
+
+   &__item {
+      height: 245px;
+      width: calc(100% / 3 - 30px);
+      margin: 0 15px 34px;
+      &:hover {
+         transition: all 0.5s;
+         box-shadow: 1px 2px 7px 8px rgba(3, 3, 3, 0.05);
+      }
+   }
+   .design-card {
+      position: relative;
+      padding: 35px 0 0 35px;
+      height: 100%;
+      background-color: #f8f8f8;
+      @extend %dmsans-700;
+      &__image-wrap {
+         position: absolute;
+         right: 0;
+         bottom: 35px;
+         max-width: 270px;
+      }
+      &__image-wrap--chair {
+         position: absolute;
+         right: 30px;
+      }
+      &__img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      &__card-title {
+         font-size: 20px;
+         color: #191919;
+         max-width: 171px;
+      }
+      &__text {
+         color: #a3bbc8;
+      }
+   }
+}
+
+.video-popup {
+   background-image: url("../images/video-popup-bg.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: bottom bottom;
+   height: 500px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 115px;
 }
 
 @import "media";

@@ -22,6 +22,8 @@ body {
 }
 .container--long {
    max-width: 1800px;
+   margin: 0 auto;
+   padding: 0 15px;
 }
 
 a {
@@ -37,4 +39,23 @@ a {
    color: #191919;
    text-align: center;
    margin-bottom: 30px;
+}
+ul.gallery-nav {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 80px;
+}
+li.gallery-nav__item {
+   margin-right: 30px;
+}
+button.gallery-nav__button {
+   padding: 0;
+   border: none;
+   @extend %dmsans-700;
+   color: #8b8b8b;
+   background-color: transparent;
+   cursor: pointer;
+}
+button.mixitup-control-active {
+   color: #191919;
 }
