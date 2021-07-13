@@ -244,7 +244,7 @@
          width: 634px;
          height: 634px;
          border-radius: 50%;
-         background-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+         background-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 95%);
          transform: translateY(-50%);
          z-index: -1;
       }
@@ -540,6 +540,112 @@
    align-items: center;
    justify-content: center;
    margin-bottom: 115px;
+}
+
+.blog {
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 45px;
+   }
+   &__view {
+      position: relative;
+      padding-right: 25px;
+      font-size: 16px;
+      color: #262626;
+      @extend %dmsans-700;
+      &:hover {
+         transition: all 0.5s;
+         color: #6ba7c7;
+      }
+   }
+   &__view svg {
+      position: absolute;
+      right: 0;
+      top: 10px;
+   }
+   &__items {
+      display: flex;
+   }
+   &__item:not(:last-child) {
+      margin-right: 30px;
+   }
+   .blog-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 5px;
+      max-width: 370px;
+      &__img-wrap {
+         position: relative;
+      }
+      &__img {
+         width: 100%;
+         height: 250px;
+         border-radius: 5px 5px 0 0;
+      }
+      &__subtitle {
+         position: absolute;
+         left: 28px;
+         bottom: -15px;
+         padding: 0 31px;
+         border: 1px solid transparent;
+         border-radius: 15px;
+         @extend %popppins-700;
+         font-size: 14px;
+         text-transform: uppercase;
+         color: #fff;
+         background-color: #a3bbc8;
+         &:hover {
+            transition: all 0.5s;
+            background-color: #6ba7c7;
+         }
+      }
+      &__info {
+         display: flex;
+         flex-direction: column;
+         padding: 35px 30px 25px;
+         height: 100%;
+         background-color: #fff;
+      }
+
+      &__link {
+         margin-bottom: 15px;
+      }
+      &__title {
+         @extend %dmsans-500;
+         font-size: 18px;
+         line-height: 25px;
+         color: #262626;
+      }
+      &__bottom {
+         display: flex;
+         margin-top: auto;
+         padding-top: 17px;
+         border-top: 1px solid #e0e0e0;
+         font-size: 12px;
+         text-transform: uppercase;
+         @extend %rubik-400;
+         color: #222933;
+      }
+
+      &__descr {
+         position: relative;
+         padding-left: 18px;
+      }
+      &__descr--date {
+         color: #222933;
+         padding-right: 30px;
+      }
+      &__descr--date svg {
+         margin-right: 5px;
+      }
+      &__descr--author {
+         color: #222933;
+         max-width: 140px;
+      }
+   }
 }
 
 @import "media";
