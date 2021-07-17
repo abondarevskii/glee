@@ -4,7 +4,9 @@ $(function () {
    $('.top-slider__inner').slick({
       dots: true,
       arrows: false,
-      fade: true
+      fade: true,
+      autoplay: true,
+      speed: 3000
    }),
 
       $('.clients-slider__items').slick({

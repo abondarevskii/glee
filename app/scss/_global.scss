@@ -26,6 +26,19 @@ body {
    padding: 0 15px;
 }
 
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
 a {
    font-size: 14px;
    line-height: 32px;
@@ -58,4 +71,35 @@ button.gallery-nav__button {
 }
 button.mixitup-control-active {
    color: #191919;
+}
+
+.breadcrumbs {
+   display: flex;
+   justify-content: center;
+   font-size: 14px;
+   line-height: 24px;
+   @extend %rubik-400;
+   color: #737980;
+
+   &__list {
+      display: inline-flex;
+   }
+   &__item {
+      padding-right: 20px;
+      position: relative;
+      &::after {
+         content: "/";
+         position: absolute;
+         right: 6px;
+         top: 4px;
+      }
+      &:last-child {
+         padding-right: 0;
+         &::after {
+            display: none;
+         }
+      }
+   }
+   &__link {
+   }
 }

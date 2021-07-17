@@ -21,73 +21,84 @@
       font-size: 15px;
       line-height: 12px;
       @extend %rubik-500;
+      color: #436372;
+      &:hover {
+         transition: all 0.5s;
+         color: #243f4d;
+      }
+   }
+   &__list-link--active {
+      color: #243f4d;
    }
    &__list-item + .menu__list-item {
       padding-left: 35px;
-   }
-   &__list-link {
-      color: #436372;
    }
 }
 
 .user-nav {
    display: flex;
-   background-repeat: no-repeat;
-   background-position: 50%;
 
    &__search {
+      position: relative;
       width: 50px;
       height: 50px;
       border-radius: 30px;
       background-color: #edf1f4;
-      background-image: url("../images/icons/search.svg");
-      background-repeat: no-repeat;
-      background-position: 50%;
       margin-right: 20px;
       &:hover {
          transition: all 1.3s;
-         background-color: #c7cacc;
+         background-color: #5f7f91;
+         path {
+            fill: #fff;
+            transition: all 0.9s;
+         }
       }
+   }
+   &__search svg {
+      position: absolute;
+      top: 33%;
+      right: 36%;
    }
 
    &__box {
-      margin-right: 20px;
+      position: relative;
       display: flex;
+   }
+   &__favorite {
       background-color: #fcd7b6;
-      border-radius: 30px;
+      border: none;
+      padding: 12px 30px 0 41px;
+      border-radius: 30px 0 0 30px;
+      cursor: pointer;
       &:hover {
          transition: all 1.3s;
-         background-color: #f8b880;
+         background-color: #5f7f91;
+         path {
+            fill: #fff;
+            transition: all 0.9s;
+         }
       }
    }
-
-   &__favorite {
-      width: 89px;
-      height: 50px;
-      background-image: url("../images/icons/heart.svg");
-      background-repeat: no-repeat;
-      background-position: 50%;
-   }
-
-   &__line {
-      width: 1px;
-      height: 32px;
-      margin: auto 0;
-      background-color: rgba(#ffffff, 0.4);
-      background-position: 50%;
-   }
-
    &__cart {
-      width: 89px;
-      height: 50px;
-      background-image: url("../images/icons/cart.svg");
-      background-repeat: no-repeat;
-      background-position: 50%;
+      background-color: #fcd7b6;
+      border: none;
+      margin-right: 20px;
+      margin-left: -1px;
+      padding: 12px 41px 0 30px;
+      border-radius: 0 30px 30px 0;
+      cursor: pointer;
+      &:hover {
+         transition: all 1.3s;
+         background-color: #5f7f91;
+         path {
+            fill: #fff;
+            transition: all 0.9s;
+         }
+      }
    }
-
    &__num {
       position: absolute;
-      transform: translate(48px, 8px);
+      transform: translate(-8px, -3px);
       @extend %dmsans-400;
       width: 16px;
       height: 16px;
@@ -99,18 +110,20 @@
    }
 
    &__more {
+      position: relative;
       width: 50px;
       height: 50px;
       border-radius: 30px;
       background-color: #a3bbc8;
-      background-image: url("../images/icons/more.svg");
-      background-repeat: no-repeat;
-      background-position: 50%;
-      margin-right: 0;
       &:hover {
          transition: all 1.3s;
          background-color: #5f7f91;
       }
+   }
+   &__more svg {
+      position: absolute;
+      top: 30%;
+      right: 29%;
    }
 }
 
@@ -207,20 +220,33 @@
       justify-content: space-between;
       align-items: center;
    }
+
    &__menu-list {
       padding-left: 30px;
       position: relative;
-
       &:not(:last-child) {
          ::after {
             content: "|";
             position: absolute;
             margin-left: 15px;
-            margin-top: -2px;
          }
       }
    }
 }
+
+.top {
+   padding: 35px 0;
+   background-color: #edf1f4;
+   &__title {
+      font-size: 36px;
+      line-height: 24px;
+      color: #222933;
+      @extend %rubik-300;
+      text-align: center;
+      margin-bottom: 8px;
+   }
+}
+
 .top-slider {
    &__inner {
       background-color: #fcd7b6;
@@ -271,6 +297,10 @@
       color: #fff;
       background-color: $accent;
       padding: 21px 20px 21px 27px;
+      &:hover {
+         transition: all 1.3s;
+         background-color: #5f7f91;
+      }
    }
    span {
       margin-right: 60px;
@@ -473,6 +503,10 @@
       border: 1px solid #d8d3cc;
       border-radius: 5px;
       color: #243f4d;
+      &:hover {
+         transition: all 1s;
+         background-color: #f8b57d;
+      }
    }
    &__link span {
       padding-right: 45px;
