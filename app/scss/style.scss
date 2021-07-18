@@ -702,8 +702,6 @@
    padding-top: 120px;
    max-width: 475px;
    margin: 0 auto 120px;
-   &__form {
-   }
    &__label {
       display: block;
       margin-bottom: 30px;
@@ -752,6 +750,12 @@
       border: 1px solid #a3bbc8;
       text-align: center;
    }
+}
+
+#clients-slider {
+   margin-top: 0;
+   padding: 90px 0 90px;
+   background-color: #fef7f0;
 }
 
 @import "media";
