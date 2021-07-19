@@ -753,9 +753,47 @@
 }
 
 #clients-slider {
-   margin-top: 0;
-   padding: 90px 0 90px;
+   padding: 90px 0 30px;
    background-color: #fef7f0;
+}
+
+.terms {
+   padding: 120px 0 110px;
+   &__content {
+      max-width: 1200px;
+      width: 100%;
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #243f4d;
+   }
+   &__title {
+      @extend %rubik-500;
+      font-size: 24px;
+      color: #243f4d;
+      margin-bottom: 25px;
+   }
+   ol.terms__list {
+      list-style-type: none;
+      counter-reset: my-counter;
+      margin-bottom: 70px;
+   }
+
+   &__item {
+      display: flex;
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+
+   li::before {
+      content: "0" counter(my-counter) ".";
+      counter-increment: my-counter;
+      margin-right: 12px;
+   }
+
+   &__text {
+      margin-bottom: 60px;
+   }
 }
 
 @import "media";
