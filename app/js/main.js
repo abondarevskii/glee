@@ -1,5 +1,19 @@
 $(function () {
 
+
+   $('.product-list__filter-btn').on('click', function () {
+      $('.product-list__filter-btn').removeClass('product-list__filter-btn--active');
+      $(this).addClass('product-list__filter-btn--active');
+   });
+
+   $('.button-list').on('click', function () {
+      $('product-list__items').addClass('product-list__items--list');
+   });
+   $('.button-grid').on('click', function () {
+      $('product-list__items').removeClass('product-list__items--list');
+   });
+
+
    $('.star').rateYo({
       starWidth: "13px",
       normalFill: "#d6d6d6",

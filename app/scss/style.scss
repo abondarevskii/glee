@@ -1209,12 +1209,50 @@
 
 .product-list__content {
    margin-bottom: 105px;
+
+   .product-list__filter {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      padding: 15px 30px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+   }
+   .product-list__filter-title {
+      @extend %dmsans-500;
+      color: #243f4d;
+      font-size: 20px;
+   }
+   .product-list__filter-buttons {
+      display: flex;
+      align-items: center;
+   }
+   .product-list__filter-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 185px;
+      line-height: 0;
+   }
+   .product-list__filter-btn--active {
+      path {
+         fill: rgb(253, 34, 18) !important;
+      }
+   }
+
    .product-list__items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
       grid-row-gap: 40px;
+      &.product-list__items--list {
+         grid-template-columns: repeat(1, 1fr);
+      }
    }
+   .product-list__filter-btn--active {
+      display: flex;
+   }
+
    .product-list__item {
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
       border-radius: 10px;
