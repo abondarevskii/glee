@@ -1495,4 +1495,152 @@
    }
 }
 
+.product-tabs {
+   padding: 100px 0 115px;
+   &__top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+   }
+   &__top-item {
+      padding: 17px 70px;
+      background-color: #edf1f4;
+      border-radius: 5px;
+      font-size: 18px;
+      @extend %rubik-500;
+      color: #243f4d;
+      &:nth-child(2) {
+         padding: 17px 24px;
+      }
+      & + .product-tabs__top-item {
+         margin-left: 20px;
+      }
+   }
+   &__top-item--active {
+      color: #fff;
+      background-color: #a3bbc8;
+   }
+
+   &__content-item {
+      display: none;
+      &.product-tabs__content-item--active {
+         display: block;
+         @extend %rubik-400;
+         color: #243f4d;
+      }
+   }
+}
+#prev,
+#next {
+   width: 50px;
+   height: 50px;
+   border-radius: 5px;
+   border: 2px solid #edf1f4;
+   background-color: transparent;
+   transition: all 0.3s;
+   cursor: pointer;
+   &:hover {
+      border-color: #a3bbc8;
+   }
+   & img {
+      margin: 0 auto;
+   }
+}
+
+#prev {
+   margin-right: 20px;
+}
+
+.related-products {
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .title {
+      max-width: 500px;
+      font-size: 36px;
+      color: #243f4d;
+      @extend %dmsans-700;
+      margin-bottom: 0;
+   }
+}
+.related-slider {
+   &__item {
+      margin: 60px 0;
+   }
+   .related-card {
+      position: relative;
+      margin-left: 10px;
+      padding: 27px 15px 35px;
+      height: 100%;
+      width: 270px;
+      border-radius: 10px;
+      height: 100%;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      &__img-wrap {
+         margin: auto auto 80px;
+         max-height: 168px;
+      }
+
+      &__title {
+         font-size: 16px;
+         color: #243f4d;
+         @extend %dmsans-500;
+         margin-bottom: 11px;
+      }
+      &__price {
+         @extend %dmsans-700;
+         color: #a3bbc8;
+      }
+      &__navigation {
+         position: absolute;
+         display: flex;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         transition: opacity 0.3s;
+         overflow: hidden;
+      }
+      &__btn {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0;
+         width: 45px;
+         height: 45px;
+         border: none;
+         border-radius: 50%;
+         background-color: #fff;
+         transition: all 1.3s;
+         cursor: pointer;
+         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+         &:hover {
+            background-color: #a3bbc8;
+            path {
+               fill: #fff;
+               transition: all 1.3s;
+            }
+         }
+      }
+      &__item {
+         transform: translateY(300%);
+         transition: all 0.3s;
+      }
+
+      &__item:not(:last-child) {
+         margin-right: 16px;
+      }
+   }
+   &:hover {
+      .related-card__item {
+         transform: translateY(0);
+         transition: all 0.3s;
+      }
+   }
+}
+
 @import "media";

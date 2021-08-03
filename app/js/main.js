@@ -1,6 +1,20 @@
 $(function () {
 
 
+   $('.product-tabs__top-item').on('click', function (e) {
+      e.preventDefault();
+      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+      $(this).addClass('product-tabs__top-item--active');
+
+
+      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
+
+
+
+   });
+
+
    $('.product-item__num').styler();
 
    $('.product-item__thumb').slick({
@@ -74,6 +88,15 @@ $(function () {
          slidesToShow: 5
 
       });
+
+   $('.related-slider__items').slick({
+      arrows: true,
+      slidesToShow: 4,
+      appendArrows: $('.your-class-arrow'),
+      prevArrow: '<button id="prev" type="button" class="btn-juliet"><i class="fa fa-chevron-left" aria-hidden="true"><img src="images/icons/arrow-left-btn.svg" alt="arrow-left"></i> </button>',
+      nextArrow: '<button id="next" type="button" class="btn-juliet"> <i class="fa fa-chevron-right" aria-hidden="true"><img src="images/icons/arrow-right-btn.svg" alt="arrow-right"></i></button>'
+
+   });
 
    var mixer = mixitup('.products__items');
    var mixer = mixitup('.design__items');
