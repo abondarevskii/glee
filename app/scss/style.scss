@@ -576,7 +576,7 @@
    margin-bottom: 115px;
 }
 
-.blog {
+.article {
    &__top {
       display: flex;
       justify-content: space-between;
@@ -605,7 +605,7 @@
    &__item:not(:last-child) {
       margin-right: 30px;
    }
-   .blog-card {
+   .article-card {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -1643,4 +1643,212 @@
    }
 }
 
+.blog {
+   padding: 120px 0;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__content {
+      width: 833px;
+      margin-right: 70px;
+   }
+
+   .blog-item {
+      margin-bottom: 60px;
+
+      &__inner-img {
+         position: relative;
+      }
+      &__img {
+         max-width: 830px;
+         height: 500px;
+         object-fit: cover;
+         display: block;
+         margin-bottom: 40px;
+      }
+
+      &__card {
+         bottom: 0;
+         position: absolute;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         width: 275px;
+         height: 70px;
+         background-color: #a3bbc8;
+      }
+      &__card-time,
+      &__card-author {
+         text-transform: uppercase;
+         font-size: 12px;
+         color: #fff;
+         @extend %rubik-400;
+      }
+
+      &__card-time {
+         padding-left: 20px;
+         position: relative;
+         &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/blog-calendar.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 12px;
+            height: 13px;
+            left: 2px;
+            top: 8px;
+         }
+      }
+
+      &__card-author {
+         padding-left: 18px;
+         position: relative;
+         &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/blog-admin-icons.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 11px;
+            height: 13px;
+            left: 1px;
+            top: 9px;
+         }
+      }
+
+      &__box {
+         margin-bottom: 40px;
+      }
+
+      &__title {
+         @extend %rubik-400;
+         font-size: 36px;
+         color: #333;
+         margin-bottom: 30px;
+         transition: all 0.3s;
+         &:hover {
+            color: #a3bbc8;
+         }
+      }
+      &__text {
+         @extend %rubik-400;
+         font-size: 16px;
+         color: #243f4d;
+      }
+      &__link-btn {
+         @extend %nunito-700;
+         font-size: 15px;
+         color: #a3bbc8;
+         padding: 20px;
+         border: 1px solid #a3bbc8;
+         transition: all 0.3s;
+
+         & svg {
+            margin-left: 37px;
+         }
+         &:hover {
+            background-color: #a3bbc8;
+            color: #fff;
+            & path {
+               fill: rgb(255, 255, 255);
+            }
+         }
+      }
+   }
+   .pagination-blog {
+      justify-content: start;
+      margin-top: 100px;
+   }
+   &__aside {
+      width: 270px;
+   }
+   .filter-search {
+      margin-bottom: 60px;
+      &__form {
+         display: flex;
+      }
+      &__input {
+         border: 2px solid #edf1f4;
+         border-radius: 7px;
+         height: 43px;
+         width: 230px;
+         padding: 15px;
+      }
+      &__btn {
+         margin-left: -10px;
+         height: 43px;
+         width: 48px;
+         background-color: #edf1f4;
+         border: none;
+         border-radius: 7px;
+         cursor: pointer;
+         & img {
+            margin: 0 auto;
+         }
+      }
+   }
+   .filter-category {
+      margin-bottom: 40px;
+   }
+   .recent-post {
+      &__item {
+         margin-bottom: 22px;
+         display: flex;
+      }
+
+      &__title {
+         @extend %rubik-400;
+         color: #333;
+      }
+      &__img-link {
+         display: block;
+         margin-right: 20px;
+         min-width: 70px;
+      }
+      &__img {
+         width: 70px;
+         height: 70px;
+         object-fit: cover;
+      }
+      &__title-link {
+         @extend %rubik-400;
+         font-size: 14px;
+         color: #333;
+         &:hover {
+            color: #234969;
+         }
+      }
+      &__title {
+         @extend %rubik-400;
+         font-size: 14px;
+         line-height: 20px;
+         margin-bottom: 14px;
+         &:hover {
+            color: #234969;
+         }
+      }
+
+      &__date {
+         @extend %rubik-400;
+         font-size: 12px;
+         color: #9a9a9a;
+         line-height: 0;
+         padding-left: 20px;
+         position: relative;
+         &::before {
+            position: absolute;
+            content: "";
+            background-image: url("../images/icons/calendar-blog-aside.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 12px;
+            height: 13px;
+            left: 0;
+            top: -6px;
+         }
+      }
+   }
+}
 @import "media";
