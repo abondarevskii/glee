@@ -2127,4 +2127,137 @@
       font-size: 14px;
    }
 }
+
+.contacts {
+   padding: 115px 0 130px;
+   text-align: center;
+   &__subtitle {
+      @extend %popppins-700;
+      font-size: 16px;
+      color: #a3bbc8;
+      margin-bottom: 10px;
+   }
+   &__title {
+      @extend %dmsans-700;
+      font-size: 35px;
+      color: #436372;
+      margin-bottom: 75px;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+   }
+   &__item {
+      height: 385px;
+      width: 370px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fbfbfb;
+      &:hover {
+         border: 2px solid #a3bbc8;
+         transition: all 0.3s;
+         path {
+            fill: #fff;
+         }
+         & .contacts__item-img {
+            background-color: #a3bbc8;
+         }
+      }
+   }
+
+   &__item-img {
+      margin: 70px 0 65px;
+      height: 80px;
+      width: 80px;
+      background-color: #fff;
+      box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+      border-radius: 25%;
+      position: relative;
+      svg {
+         position: absolute;
+         left: 30%;
+         top: 22%;
+         path {
+            fill: #a3bbc8;
+         }
+      }
+   }
+
+   &__item-img--mail {
+      position: relative;
+      svg {
+         position: absolute;
+         left: 28%;
+         top: 25%;
+         path {
+            fill: #a3bbc8;
+         }
+      }
+   }
+
+   &__item-img--phone {
+      position: relative;
+      svg {
+         position: absolute;
+         left: 28%;
+         top: 25%;
+         path {
+            fill: #a3bbc8;
+         }
+      }
+   }
+
+   &__item-title {
+      @extend %dmsans-700;
+      font-size: 20px;
+      color: #222;
+      margin-bottom: 25px;
+   }
+   &__item-address {
+      width: 160px;
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #565872;
+   }
+   &__item-mail {
+      display: flex;
+      flex-direction: column;
+   }
+   &__item-box {
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #565872;
+      & a {
+         @extend %rubik-400;
+         color: inherit;
+         font-size: inherit;
+      }
+   }
+}
+
+.contacts-location {
+   &__inner {
+      display: flex;
+   }
+}
+.contacts-form {
+   max-width: 620px;
+   margin-right: 50px;
+}
+
+.contacts-form__textarea {
+   margin-bottom: 30px;
+}
+.contacts-form__btn {
+   float: left;
+   font-size: 15px;
+   border-radius: 5px;
+}
+#map {
+   height: 335px;
+   width: 500px;
+}
+
 @import "media";
