@@ -39,10 +39,10 @@ $(function () {
    });
 
    $('.button-list').on('click', function () {
-      $('content-list__items').addClass('content-list__items--list');
+      $('.content-list__items').addClass('content-list__items--list');
    });
    $('.button-grid').on('click', function () {
-      $('content-list__items').removeClass('content-list__items--list');
+      $('.content-list__items').removeClass('content-list__items--list');
    });
 
 

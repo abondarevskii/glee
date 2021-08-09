@@ -1165,7 +1165,6 @@
    &__items-img {
       display: flex;
       flex-direction: column;
-
       margin-right: 20px;
    }
 
@@ -1208,7 +1207,12 @@
 }
 
 .content-list {
+   width: 100%;
    margin-bottom: 105px;
+
+   &__wrapper {
+      display: none;
+   }
 
    &__filter {
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -1240,17 +1244,11 @@
       }
    }
 
-   &__filter-btn--active {
-      display: flex;
-   }
    &__items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
       grid-row-gap: 40px;
-      &.content-list__items--list {
-         grid-template-columns: repeat(1, 1fr);
-      }
    }
 
    &__item {
@@ -1325,6 +1323,78 @@
          path {
             fill: #fff;
             transition: all 1.3s;
+         }
+      }
+   }
+   &__items--list {
+      position: relative;
+      grid-template-columns: repeat(1, 1fr);
+      .content-listgit__item {
+         height: 500px;
+         box-shadow: none;
+      }
+
+      .product-list__card {
+         justify-content: flex-start;
+         width: 370px;
+         padding: 0;
+         border: 2px solid #f2f2f2;
+      }
+      .product-list__navigation {
+         display: none !important;
+      }
+      .product-list__info {
+         display: none;
+      }
+      .content-list__wrapper {
+         display: block;
+         position: absolute;
+         top: 75px;
+         left: 425px;
+      }
+      .content-list__item-box {
+         margin-bottom: 35px;
+      }
+      .content-list__title {
+         @extend %rubik-400;
+         font-size: 40px;
+         color: #333333;
+         margin-bottom: 25px;
+      }
+      .star {
+         margin-bottom: 35px;
+      }
+      .content-list__price {
+         @extend %rubik-400;
+         font-size: 30px;
+         color: #333333;
+      }
+      .content-list__text {
+         @extend %rubik-400;
+         font-size: 16px;
+         color: #243f4d;
+         margin-bottom: 60px;
+      }
+      .content-list__btn {
+         width: 50px;
+         height: 50px;
+         cursor: pointer;
+         background-color: #fff;
+         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+         border: none;
+         margin-right: 10px;
+         &:hover {
+            transition: all 0.3s;
+            background-color: #a3bbc8;
+            path {
+               fill: #fff;
+            }
+         }
+         svg {
+            transform: translateY(25%);
+            path {
+               fill: #a3bbc8;
+            }
          }
       }
    }
