@@ -1,0 +1,15 @@
+.clients-slider {
+   margin-top: -201px;
+   padding: 260px 0 90px;
+   background-color: #fef7f0;
+   &__items {
+      display: flex;
+   }
+   &__item {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      height: 85px;
+      width: 234px;
+   }
+}
