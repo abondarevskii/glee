@@ -148,3 +148,21 @@ button.mixitup-control-active {
       color: #fff;
    }
 }
+
+@media (max-width: 400px) {
+   .title {
+      font-size: 36px;
+   }
+}
+
+@media (max-width: 380px) {
+   .title {
+      font-size: 30px;
+   }
+}
+
+@media (max-width: 340px) {
+   .title {
+      font-size: 28px;
+   }
+}
