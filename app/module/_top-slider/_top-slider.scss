@@ -16,10 +16,10 @@
       ::before {
          content: "";
          position: absolute;
-         right: -70px;
+         right: 63px;
          top: 50%;
-         width: 634px;
-         height: 634px;
+         width: 510px;
+         height: 510px;
          border-radius: 50%;
          transform: translate(11%, -50%);
          background: linear-gradient(270deg, #fff, rgba(0, 0, 0, 0));
@@ -126,5 +126,98 @@
       font-size: 16px;
       line-height: 30px;
       color: #585858;
+   }
+}
+
+@media (max-width: 1200px) {
+   .top-slider {
+      &__item {
+         padding: 160px 0 140px;
+      }
+      &__title {
+         font-size: 60px;
+         line-height: 64px;
+         margin-bottom: 20px;
+      }
+   }
+}
+
+@media (max-width: 1050px) {
+   .advantages__items {
+      flex-direction: column;
+   }
+   .advantages__item {
+      padding: 20px;
+   }
+   .advantages__item:not(:last-child) {
+      border-right: none;
+   }
+}
+
+@media (max-width: 860px) {
+   .top-slider {
+      &__item {
+         padding: 75px 0 !important;
+      }
+      &__images {
+         display: none;
+      }
+      &__wrap {
+         ::before {
+            display: none;
+         }
+      }
+      &__content {
+         width: 100%;
+      }
+      &__title {
+         max-width: 100%;
+      }
+      &__text {
+         max-width: 100%;
+      }
+   }
+}
+
+@media (max-width: 375px) {
+   .top-slider {
+      &__item {
+         padding: 60px 0;
+      }
+      &__title {
+         font-size: 49px;
+         line-height: 53px;
+         margin-bottom: 15px;
+      }
+   }
+   .advantages {
+      &__title {
+         font-size: 16px;
+      }
+      &__text {
+         font-size: 14px;
+         line-height: 26px;
+      }
+   }
+}
+
+@media (max-width: 375px) {
+   .top-slider {
+      &__item {
+         padding: 60px 0;
+      }
+      &__title {
+         font-size: 45px;
+         line-height: 50px;
+      }
+   }
+   .advantages {
+      &__title {
+         font-size: 16px;
+      }
+      &__text {
+         font-size: 14px;
+         line-height: 26px;
+      }
    }
 }
