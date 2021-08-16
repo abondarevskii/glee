@@ -122,7 +122,34 @@ $(function () {
       slidesToShow: 4,
       appendArrows: $('.your-class-arrow'),
       prevArrow: '<button id="prev" type="button" class="btn-juliet"><i class="fa fa-chevron-left" aria-hidden="true"><img src="images/icons/arrow-left-btn.svg" alt="arrow-left"></i> </button>',
-      nextArrow: '<button id="next" type="button" class="btn-juliet"> <i class="fa fa-chevron-right" aria-hidden="true"><img src="images/icons/arrow-right-btn.svg" alt="arrow-right"></i></button>'
+      nextArrow: '<button id="next" type="button" class="btn-juliet"> <i class="fa fa-chevron-right" aria-hidden="true"><img src="images/icons/arrow-right-btn.svg" alt="arrow-right"></i></button>',
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 3,
+
+            }
+         },
+         {
+            breakpoint: 846,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 2
+            }
+         },
+         {
+            breakpoint: 601,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+
+      ]
+
+
 
    });
 

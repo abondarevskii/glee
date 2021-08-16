@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glee</title>
+   <link rel="stylesheet" href="css/login.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  {% include 'app/module/_header/_header.html' %} 
+
+   <main class="main">
+
+      <section class="top">
+         <div class="container container--long">
+            <h2 class="top__title">Log in</h2>
+
+            <div class="breadcrumbs">
+               <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                     <a class="breadcrumbs__link" href="#">Home</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                     <a class="breadcrumbs__link" href="#">Log in</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+      <section class="modal">
+         <div class="container">
+            <form class="modal__form">
+               <label class="modal__label">
+                  Username or email address *
+                  <input class="modal__input" type="text" required>
+               </label>
+               <label class="modal__label">
+                  Password *
+                  <input class="modal__input" type="password" required>
+               </label>
+
+               <button class="modal__btn" href="#">
+                  Login
+               </button>
+
+               <div class="box">
+                  <label class="modal__label">
+                     <input class="modal__checkbox" type="checkbox">
+                     Remember me
+                  </label>
+
+                  <a class="modal__lost" href="#">
+                     Lost your password?
+                  </a>
+
+               </div>
+
+               <a class="modal__registred" href="#">
+                  Not registered? No problem
+               </a>
+
+               <a class="modal__btn modal__btn--create" href="#">
+                  Create an account
+               </a>
+
+            </form>
+         </div>
+      </section>
+
+      <div id="clients-slider" class="clients-slider>
+         <div class=" container">
+         <ul class="clients-slider__items">
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/1.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/2.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/3.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/4.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/5.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/1.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/2.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/3.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/4.png" alt="logo">
+            </li>
+            <li class="clients-slider__item">
+               <img class="clients-slider__img" src="images/clients-slider/5.png" alt="logo">
+            </li>
+         </ul>
+      </div>
+      </div>
+
+   </main>
+   
+{% include 'app/module/_footer/_footer.html' %} 
+
+
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>
