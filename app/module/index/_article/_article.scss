@@ -1,6 +1,7 @@
 .article {
    &__top {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 45px;
@@ -100,6 +101,39 @@
       &__descr--author {
          color: #222933;
          max-width: 140px;
+      }
+   }
+}
+
+@media (max-width: 1200px) {
+   .article {
+      &__items {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px;
+      }
+      &__item:not(:last-child) {
+         margin-right: 0;
+      }
+      .article-card {
+         max-width: 100%;
+      }
+      .article-card__bottom {
+         justify-content: space-between;
+      }
+   }
+}
+
+@media (max-width: 860px) {
+   .article__items {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+@media (max-width: 860px) {
+   .article {
+      .article-card__bottom {
+         flex-wrap: wrap;
       }
    }
 }

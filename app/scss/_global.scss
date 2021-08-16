@@ -18,7 +18,6 @@ body {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 15px;
-   min-width: 320px;
 }
 .container--long {
    max-width: 1800px;
@@ -151,18 +150,12 @@ button.mixitup-control-active {
 
 @media (max-width: 400px) {
    .title {
-      font-size: 36px;
+      font-size: 33px;
    }
 }
 
 @media (max-width: 380px) {
    .title {
-      font-size: 30px;
-   }
-}
-
-@media (max-width: 340px) {
-   .title {
-      font-size: 28px;
+      font-size: 26px;
    }
 }

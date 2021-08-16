@@ -90,8 +90,31 @@ $(function () {
          arrows: false,
          autoplay: true,
          speed: 3000,
-         slidesToShow: 5
+         slidesToShow: 5,
+         responsive: [
+            {
+               breakpoint: 860,
+               settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
 
+               }
+            },
+            {
+               breakpoint: 600,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3
+               }
+            },
+            {
+               breakpoint: 480,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+               }
+            }
+         ]
       });
 
    $('.related-slider__items').slick({
@@ -103,10 +126,18 @@ $(function () {
 
    });
 
-   var mixer = mixitup('.products__items');
-   var mixer = mixitup('.design__items');
 
+   // MixitUp !!!!!!!!!!!!
 
+   let containerEl1 = document.querySelector('.design');
+   let containerEl2 = document.querySelector('.products');
+   let config = {
+      controls: {
+         scope: 'local',
+      },
+   };
+   (() => mixitup(containerEl1, config))();
+   (() => mixitup(containerEl2, config))();
 
 
 });

@@ -13,3 +13,18 @@
       width: 234px;
    }
 }
+
+@media (max-width: 1200px) {
+   .clients-slider {
+      margin-top: -176px;
+
+      padding: 215px 0 65px;
+   }
+}
+
+@media (max-width: 860px) {
+   .clients-slider {
+      margin-top: -151px;
+      padding: 205px 0 65px;
+   }
+}

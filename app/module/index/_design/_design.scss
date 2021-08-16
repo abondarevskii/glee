@@ -47,3 +47,52 @@
       }
    }
 }
+
+@media (max-width: 1200px) {
+   .design {
+      margin-bottom: 50px;
+      &__item {
+         width: calc(100% / 2 - 30px);
+      }
+   }
+}
+
+@media (max-width: 860px) {
+   .design {
+      margin-bottom: 10px;
+      .design-card {
+         padding: 35px 0 0 15px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .design {
+      &__item {
+         width: calc(100% / 1 - 30px);
+      }
+   }
+}
+
+@media (max-width: 620px) {
+   .design {
+      .design-card__card-title {
+         max-width: 100%;
+      }
+   }
+}
+
+@media (max-width: 375px) {
+   .design {
+      .design-card__img {
+         width: 80%;
+      }
+      .design-card__image-wrap {
+         right: 0;
+      }
+      .design-card__image-wrap--chair {
+         right: 38px;
+         top: 85px;
+      }
+   }
+}
