@@ -16,9 +16,47 @@
          }
       }
    }
+   .product-list {
+      .content-list__items {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      .content-list__items--list {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+   .contacts__item {
+      height: 369px;
+      width: 327px;
+   }
 }
 
 @media (max-width: 1050px) {
+   .contacts {
+      padding: 55px 0 65px;
+   }
+   .contacts-location__inner {
+      display: block;
+   }
+   .contacts-form {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 90px;
+   }
+   .blog-form__box-input {
+      display: block;
+   }
+   .blog-form__input-name {
+      margin-bottom: 20px;
+      width: 100%;
+      background-position: 98% 50%;
+   }
+   .blog-form__input-email {
+      width: 100%;
+      background-position: 98% 50%;
+   }
+   #map {
+      width: 100%;
+   }
 }
 
 @media (max-width: 860px) {
@@ -54,6 +92,47 @@
       }
       &__top-item {
          margin-left: 0 !important;
+         margin-bottom: 30px;
+      }
+   }
+
+   .product-list__filters {
+      display: none;
+      padding: 37px;
+      display: block;
+      top: 20px;
+      position: absolute;
+      width: 100%;
+      z-index: 90;
+      background-color: rgb(255, 255, 255);
+   }
+   .product-list__filter-btn {
+      display: block;
+      background-color: #414294;
+      border: none;
+      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      bottom: 40px;
+      left: 10px;
+      z-index: 100;
+   }
+   .product-list {
+      padding: 60px 0;
+      .content-list__filter {
+         display: none;
+      }
+   }
+   .terms {
+      padding: 60px 0 55px;
+   }
+   .contacts {
+      &__items {
+         display: block;
+      }
+      &__item {
+         width: 100%;
          margin-bottom: 30px;
       }
    }
@@ -94,6 +173,12 @@
          .related-card__img {
             margin: 0 auto;
          }
+      }
+   }
+
+   .product-list {
+      .content-list__items {
+         grid-template-columns: repeat(1, 1fr);
       }
    }
 }
