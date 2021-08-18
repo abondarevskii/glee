@@ -94,14 +94,21 @@ $(function () {
                }
             },
             {
-               breakpoint: 600,
+               breakpoint: 726,
                settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3
                }
             },
             {
-               breakpoint: 480,
+               breakpoint: 549,
+               settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+               }
+            },
+            {
+               breakpoint: 375,
                settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1
@@ -118,7 +125,7 @@ $(function () {
       nextArrow: '<button id="next" type="button" class="btn-juliet"> <i class="fa fa-chevron-right" aria-hidden="true"><img src="images/icons/arrow-right-btn.svg" alt="arrow-right"></i></button>',
       responsive: [
          {
-            breakpoint: 1024,
+            breakpoint: 1025,
             settings: {
                slidesToShow: 3,
                slidesToScroll: 3,

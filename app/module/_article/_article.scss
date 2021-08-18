@@ -128,12 +128,27 @@
    .article__items {
       grid-template-columns: repeat(1, 1fr);
    }
-}
-
-@media (max-width: 860px) {
    .article {
       .article-card__bottom {
          flex-wrap: wrap;
       }
+   }
+}
+
+@media (max-width: 600px) {
+   .article {
+      &__top {
+         display: block;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 45px;
+      }
+   }
+}
+
+@media (max-width: 400px) {
+   .product-details {
+      padding: 60px 0 0;
    }
 }
